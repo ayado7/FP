@@ -9,7 +9,7 @@ function register(){
    //Put it in the Database
       let xhr = new XMLHttpRequest();
       xhr.responseType = "json";
-      xhr.open("POST", "http://127.0.0.1:5000/api/signup");
+      xhr.open("POST", "http://34.107.19.83/api/signup");
       // define what to do when the response comes back
       xhr.onload = function () {
       // redirect user to the main page
@@ -35,7 +35,7 @@ function authenticate()
    var password = document.getElementById ("password").value;
    // Take user input to the server
    let xhr = new XMLHttpRequest();
-   xhr.open("POST", "http://127.0.0.1:5000/api/signin");
+   xhr.open("POST", "http://34.107.19.83/api/signin");
    xhr.onload = function () {
       var response = JSON.parse(xhr.response)
       if (response.success){
@@ -86,7 +86,7 @@ function loadMain () {
    var all_posts = document.getRootNode("story-content").value;
    let xhr = new XMLHttpRequest();
    xhr.responseType = "json";
-   xhr.open("POST", "http://127.0.0.1:5000/api/posts");
+   xhr.open("POST", "http://34.107.19.83/api/posts");
    // define what to do when the response comes back
    xhr.onerror = function (error) {
       console.log("ERROR! ", error)
@@ -109,7 +109,7 @@ function newPost() {
    if (payLoad != 0) {
       let xhr = new XMLHttpRequest();
       xhr.responseType = "json";
-      xhr.open("POST", "http://127.0.0.1:5000/api/posts");
+      xhr.open("POST", "http://34.107.19.83/api/posts");
       // define what to do when the response comes back
       xhr.onerror = function (error) {
          console.log("ERROR! ", error)

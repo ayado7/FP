@@ -6,7 +6,7 @@ from flask_cors import CORS
 app = Flask (__name__)
 import DBconnector
 
-CORS(app, resources={r"/api/*": {"origins": "http://127.0.0.1"}})
+CORS(app, resources={r"/api/*": {"origins": "http://34.107.19.83/"}})
 
 @app.route('/')
 def main():
